@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .inline-header {
+            font-family: proxima-nova-1, proxima-nova-2, 'Proxima Nova', sans-serif;
+            font-weight: 700;
+        }
+
+        header {
+            display: block;
+            position: fixed;
+            z-index: 1000;
+            top: 0;
+            right: 0;
+            left: 0;
+            height: 58px;
+            background-color: #000000;
+            text-align: center;
+        }
+
+        header a:hover {
+            color: #ffffff
+        }
+
+        header ul.list-reset {
+            top: 0;
+            bottom: 0;
+            height: 100%;
+            margin: 0;
+            padding: 0
+        }
+
+        header ul.list-reset li {
+            display: inline-block;
+            height: 100%;
+            padding-right: .2em;
+
+        }
+
+        header .row {
+            height: 58px;
+            padding-top: 0;
+            padding-bottom: 0
+        }
+
+        header a {
+            font-family: proxima-nova-1, proxima-nova-2, 'Proxima Nova', sans-serif;
+            font-weight: 700;
+            display: inline-block;
+            height: 100%;
+            padding: 0 .5em;
+            color: #909090;
+            font-size: 1em;
+            line-height: 58px
+        }
+
+        @media only screen and (max-width: 529px) {
+            header a {
+                font-size: 1.15em;
+                padding: 0 .4em
+            }
+        }
+
+        @media only screen and (max-width: 529px) {
+            header {
+                text-align: center
+            }
+
+            header .row {
+                padding: 0
+            }
+        }
+
+
+
+
+        * {
+            background-color: #262829;
+        }
+
+        h2 {
+            position: absolute;
+            font-size: 100px;
+            top: 20%;
+            left: 50%;
+            background-color: transparent;
+            color: white;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-weight: bold;
+            text-transform: uppercase;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+        h3 {
+            position: absolute;
+            font-size: 50px;
+            top: 50%;
+            left: 50%;
+            background-color: transparent;
+            color: white;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            transform: translate(-50%, -50%);
+
+        }
+
+
+        .second {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px;
+        }
+
+        .centered-text {
+            font-size: 60px;
+            color: white;
+            text-transform: uppercase;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .pictures {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            justify-content: space-around;
+
+        }
+
+        .picture {
+            width: 100%;
+            flex: 1;
+            margin: 10px;
+            margin-bottom: 40px;
+
+        }
+
+        .banner {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 150px;
+        }
+
+        .banner img {
+            width: 100%;
+            height: auto;
+        }
+
+        .hotdog {
+            position: absolute;
+            top: 50%; 
+            left: 70%;
+            transform: translate(-50%, -50%);
+            color: rgb(255, 255, 255);
+            background-color: transparent;
+            text-align: center;
+        }
+
+        .hotdog h7 {
+            font-weight: bold;
+            font-size: 95px;
+            text-transform: uppercase;
+            background-color: transparent;
+        }
+
+        .hotdog h8 {
+            font-size: 45px;
+            background-color: transparent;  
+        }
+
+        .gudj {
+            margin: 60px;
+            text-align: center;
+            justify-content: space-around;
+        }
+
+        .box-content {
+            display: flex;
+            align-items: center;
+            text-align: center;
+        }
+
+        .box1,
+        .box2 {
+            padding-left: 650px;
+        }
+
+        .box3 {
+            padding-left: 1040px;
+        }
+
+        .box-content h1 {
+            margin: 10px;
+            color: white;
+            font-size: 40px;
+            text-transform: uppercase;
+        }
+        .banner2 {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 150px;
+        }
+
+        .banner2 img {
+            width: 100%;
+            height: auto;
+        }
+
+        .fries {
+            position: absolute;
+            top: 50%; 
+            left: 70%;
+            transform: translate(-50%, -50%);
+            color: rgb(0, 0, 0);
+            background-color: transparent;
+            text-align: center;
+        }
+
+        .fries h7 {
+            font-weight: bold;
+            font-size: 65px;
+            text-transform: uppercase;
+            background-color: transparent;
+        }
+
+        .fries h8 {
+            font-size: 35px;
+            background-color: transparent;  
+        }
+        
+
+        .picture img {
+            border-radius: 50px;
+        }
+
+        .recipt {
+            margin-top: 80px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .box4 img {
+            border-radius: 50px;
+            width: 600px;
+        }
+
+        .box4 {
+            width: 1200px;
+            height: auto;
+            background-color: #0e0e0e;
+            border-radius: 50px;
+            display: flex;
+            align-items: flex-start;
+            padding: 20px;
+        }
+
+        .text-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-right: 250px;
+            background-color: transparent;
+        }
+
+        .box4 h4,
+        .box4 h5 {
+            color: white;
+            margin: 0;
+            background-color: transparent;
+        }
+
+        .box4 h4 {
+            font-size: 50px;
+            text-transform: uppercase;
+        }
+
+        .box4 h5 {
+            font-size: 20px;
+            padding: 20px;
+        }
+
+        .button {
+            margin-top: 70px;
+            background-color: transparent;
+        }
+
+        .button a {
+            padding: 30px 40px;
+            background-color: #f39c12;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 20px;
+        }
+
+        .button a:hover {
+            background-color: #ff7b00;
+        }
+
+
+        .icons {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            margin: 20px;
+            background-color: black;
+            padding: 8px;
+        }
+
+        .icon img {
+            background-color: black;
+
+        }
+
+        .flex-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            padding-top: 130px;
+            background-color: rgb(23, 23, 23);
+        }
+
+        .category {
+            color: white;
+            font-family: "Poppins", sans-serif;
+            font-weight: bold;
+            font-size: 20px;
+            text-transform: uppercase;
+            background-color: transparent;
+        }
+
+        .link {
+            padding-top: 30px;
+            color: rgb(155, 155, 155);
+            font-family: "Poppins", sans-serif;
+            font-size: 15px;
+            background-color: transparent;
+        }
+
+        .content {
+            margin: 50px;
+            margin-top: 8px;
+            background-color: transparent;
+        }
+
+        .copyright {
+            margin-top: 70px;
+            color: rgb(186, 186, 186);
+            background-color: transparent;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div>
+            <ul class="list-reset">
+                <li><a href="#welcome">Home</a></li>
+                <li><a href="#work">Menu</a></li>
+                <li><a href="#about">Composition</a></li>
+                <li><a href="#contact">About Us</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <div class="start">
+        <img src="https://img.freepik.com/free-photo/delicious-pizza-indoors_23-2150873868.jpg?t=st=1734722496~exp=1734726096~hmac=9691e6ab2483fcd4f0d7b77504a9ed51b0183abd8e52f7a012be1470fa512878&w=2000"
+            width="100%"></img>
+        <div class="theme">
+            <h2>Fresh <br>tasty <br>fast</h2>
+            <h3> here you can find a snack to suit your taste</h3>
+        </div>
+    </div>
+
+    <div class="second">
+        <h6 class="centered-text">we have</h6>
+        <div class="pictures">
+            <div class="picture"><img
+                    src="https://img.freepik.com/free-photo/delicious-traditional-taco-with-meat_23-2150799573.jpg?ga=GA1.1.1020485179.1734718578&semt=ais_hybrid"
+                    width="100%"></div>
+            <div class="picture"><img
+                    src="https://img.freepik.com/premium-photo/portrait-yakitori-musttry-dish-those-craving-japanese_1077802-221529.jpg?ga=GA1.1.1020485179.1734718578"
+                    width="100%"></div>
+            <div class="picture"><img
+                    src="https://img.freepik.com/free-photo/street-food-still-life_23-2151535284.jpg?ga=GA1.1.1020485179.1734718578&semt=ais_hybrid"
+                    width="100%"></div>
+            <div class="picture"><img
+                    src="https://img.freepik.com/free-photo/delicious-street-food-still-life_23-2151535340.jpg?ga=GA1.1.1020485179.1734718578&semt=ais_hybrid"
+                    width="100%"></div>
+        </div>
+    </div>
+
+
+    <div class="banner">
+        <img src="https://img.freepik.com/free-photo/minimalist-fast-food-hot-dog-copy-space_23-2148668448.jpg?t=st=1734744842~exp=1734748442~hmac=22e327b7d63bf53a13061112263cf238d32403e74733aa5099d8bcc9af3c9bdf&w=2000" width="100%">
+        <div class="hotdog">
+            <h7>Hoisin hot dogs</h7>
+            <h8><br>Mix the sriracha with the mayonnaise <br>Brush the sausages with the hoisin sauce and cook under a grill
+                following pack instructions <br>Split the hot dog buns, fill each with a sausage and spoon over some
+                extra hoisin sauce <br>Top with the cucumber, the sriracha mayonnaise and spring onions</h8>
+        </div>
+    </div>
+
+
+<section>
+    <div class="gudj">
+
+        <div class="box1">
+            <div class="box-content 1">
+                <h1>convenient to bring with you</h1>
+                <img src="https://img.freepik.com/premium-photo/worker-food-delivery-service-packing-order-customer_392895-23275.jpg?w=2000"
+                    width="25%">
+            </div>
+        </div>
+
+        <div class="box2">
+            <div class="box-content 2">
+                <img src="https://img.freepik.com/free-photo/high-angle-fried-chicken-fries-with-ketchup_23-2148682821.jpg?t=st=1734738404~exp=1734742004~hmac=bf11762127e642b4b167533f2c3767984770afb5e8b4d812efd274faf9c4e859&w=2000"
+                    width="25%">
+                <h1>nourishing</h1>
+            </div>
+        </div>
+
+        <div class="box3">
+            <div class="box-content 3">
+                <h1>great variety</h1>
+                <img src="https://img.freepik.com/premium-photo/hot-dogs-hamburgers-french-fries-wooden-table-fast-food-snacks-top-view_114941-2547.jpg?w=2000"
+                    width="30%">
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+
+    <div class="banner2"><img
+            src="https://img.freepik.com/free-photo/top-view-fried-chicken-fries-with-copy-space_23-2148699072.jpg?t=st=1734721886~exp=1734725486~hmac=1920cf2a871bfddbd5dfb61413889334dec549b97b271079c295762b2b5330ea&w=2000"
+            width="100%">
+<div class="fries">
+    <h7>fried chicken pieces and chips</h7>
+<h8><br>Fried succulent pieces of chicken available on packages of 2, 3 or 6 pieces and a range of meal packages</h8> 
+</div>
+    </div>
+
+
+
+    <div class="recipt">
+        <div class="box4">
+            <div class="text-container">
+                <h4>composition <br>burger</h4>
+                <h5>bun <br>sause <br>salad <br>tomato <br>onion <br>cheese <br>beef <br>onion 2x <br>tomato 2x
+                    <br>salad 2x
+                    <br>sause <br>bun
+                </h5>
+                <div class="button"> <a href="#">READ MORE</a></div>
+            </div>
+            <img src="https://static.tildacdn.com/tild6335-6466-4133-b832-653334653633/fd9325e7-no-bg-previ.png"
+                width="300px">
+        </div>
+    </div>
+
+    <div class="icons">
+        <div class="icon"><img
+                src="https://cdn-icons-png.freepik.com/256/15614/15614496.png?ga=GA1.1.1020485179.1734718578&semt=ais_hybrid">
+        </div>
+        <div class="icon"><img
+                src="https://cdn-icons-png.freepik.com/256/15614/15614599.png?ga=GA1.1.1020485179.1734718578"></div>
+        <div class="icon"><img
+                src="https://cdn-icons-png.freepik.com/256/15614/15614437.png?ga=GA1.1.1020485179.1734718578"></div>
+        <div class="icon"><img
+                src="https://cdn-icons-png.freepik.com/256/15614/15614458.png?ga=GA1.1.1020485179.1734718578"></div>
+        <div class="icon"><img
+                src="https://cdn-icons-png.freepik.com/256/15614/15614563.png?ga=GA1.1.1020485179.1734718578"></div>
+    </div>
+
+    <section class="footer">
+        <div class="end">
+            <div class="flex-container">
+                <div class="content">
+                    <div class="category">Quick links</div>
+                    <div class="link">Home</div>
+                    <div class="link">Menu</div>
+                    <div class="link">Composition</div>
+                    <div class="link">About us</div>
+                    <div class="copyright">Copyright ©2021 FastFoodSites.com. All Rights Reserved.</div>
+                </div>
+                <div class="content">
+                    <div class="category">Information</div>
+                    <div class="link">Term Of Service</div>
+                    <div class="link">Privacy Policy</div>
+                </div>
+            </div>
+    </section>
+
+</body>
+
+</html>
